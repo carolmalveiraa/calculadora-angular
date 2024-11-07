@@ -10,24 +10,24 @@
     <div class="btn-container">
       <button (click)="clearEntry()">CE</button>
       <button (click)="clearAll()">C</button>
-      <button>%</button>
-      <button>/</button>
+      <button (click)="percentage()">%</button>
+      <button (click)="divide()">/</button>
       <button class="number" (click)="inputNumber('7')">7</button>
       <button class="number" (click)="inputNumber('8')">8</button>
       <button class="number" (click)="inputNumber('9')">9</button>
-      <button>*</button>
+      <button (click)="multiply()">*</button>
       <button class="number" (click)="inputNumber('4')">4</button>
       <button class="number" (click)="inputNumber('5')">5</button>
       <button class="number" (click)="inputNumber('6')">6</button>
-      <button>-</button>
+      <button (click)="subtract()">-</button>
       <button class="number" (click)="inputNumber('1')">1</button>
       <button class="number" (click)="inputNumber('2')">2</button>
       <button class="number" (click)="inputNumber('3')">3</button>
-      <button>+</button>
-      <button class="number">0</button>
-      <button class="equal">+/-</button>
-      <button class="number">.</button>
-      <button class="equal">=</button>
+      <button (click)="add()">+</button>
+      <button class="number" (click)="inputNumber('0')">0</button>
+      <button class="equal" (click)="toggleSign()">+/-</button>
+      <button class="number" (click)="inputDecimal()">.</button>
+      <button class="equal" (click)="calcResult()">=</button>
     </div>
   </div>
 </div>
