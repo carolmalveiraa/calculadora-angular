@@ -4,25 +4,25 @@
       <h3>Calculadora</h3>
     </div>
     <div class="operations">
-      <div class="prev-calc">45 + 45 =</div>
-      <div class="atual-calc">45</div>
+      <div class="prev-calc">{{ previousValue }} {{ operation }}</div>
+      <div class="atual-calc">{{ currentValue }}</div>
     </div>
     <div class="btn-container">
-      <button>CE</button>
-      <button>C</button>
+      <button (click)="clearEntry()">CE</button>
+      <button (click)="clearAll()">C</button>
       <button>%</button>
       <button>/</button>
-      <button class="number">7</button>
-      <button class="number">8</button>
-      <button class="number">9</button>
+      <button class="number" (click)="inputNumber('7')">7</button>
+      <button class="number" (click)="inputNumber('8')">8</button>
+      <button class="number" (click)="inputNumber('9')">9</button>
       <button>*</button>
-      <button class="number">4</button>
-      <button class="number">5</button>
-      <button class="number">6</button>
+      <button class="number" (click)="inputNumber('4')">4</button>
+      <button class="number" (click)="inputNumber('5')">5</button>
+      <button class="number" (click)="inputNumber('6')">6</button>
       <button>-</button>
-      <button class="number">1</button>
-      <button class="number">2</button>
-      <button class="number">3</button>
+      <button class="number" (click)="inputNumber('1')">1</button>
+      <button class="number" (click)="inputNumber('2')">2</button>
+      <button class="number" (click)="inputNumber('3')">3</button>
       <button>+</button>
       <button class="number">0</button>
       <button class="equal">+/-</button>
@@ -31,5 +31,3 @@
     </div>
   </div>
 </div>
-
-<!-- testando -->
