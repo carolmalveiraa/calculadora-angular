@@ -3,40 +3,31 @@
     <div class="title-calc">
       <h3>Calculadora</h3>
     </div>
-
-    <div class="display-container">
-      <!-- Visor que mostra o número e o resultado -->
-      <div class="display">{{ display || '0' }}</div>
+    <div class="operations">
+      <div class="prev-calc">{{ previousValue }} {{ operation }}</div>
+      <div class="atual-calc">{{ currentValue }}</div>
     </div>
-    
     <div class="btn-container">
-      <!-- Botões de limpar -->
-      <button (click)="limparEntrada()">CE</button>
-      <button (click)="limpar()">C</button>
-      <button (click)="calcularPercentual()">%</button>
-      <button (click)="escolherOperador('/')">/</button>
-    
-      <!-- Botões de números -->
-      <button class="number" (click)="adicionarNumero('7')">7</button>
-      <button class="number" (click)="adicionarNumero('8')">8</button>
-      <button class="number" (click)="adicionarNumero('9')">9</button>
-      <button (click)="escolherOperador('*')">*</button>
-    
-      <button class="number" (click)="adicionarNumero('4')">4</button>
-      <button class="number" (click)="adicionarNumero('5')">5</button>
-      <button class="number" (click)="adicionarNumero('6')">6</button>
-      <button (click)="escolherOperador('-')">-</button>
-    
-      <button class="number" (click)="adicionarNumero('1')">1</button>
-      <button class="number" (click)="adicionarNumero('2')">2</button>
-      <button class="number" (click)="adicionarNumero('3')">3</button>
-      <button (click)="escolherOperador('+')">+</button>
-    
-      <button class="number" (click)="adicionarNumero('0')">0</button>
-      <button class="equal" (click)="inverterSinal()">+/-</button>
-      <button class="number" (click)="adicionarNumero('.')">.</button>
-      <button class="equal" (click)="calcular()">=</button>
-    </div>    
-    
+      <button (click)="clearEntry()">CE</button>
+      <button (click)="clearAll()">C</button>
+      <button>%</button>
+      <button>/</button>
+      <button class="number" (click)="inputNumber('7')">7</button>
+      <button class="number" (click)="inputNumber('8')">8</button>
+      <button class="number" (click)="inputNumber('9')">9</button>
+      <button>*</button>
+      <button class="number" (click)="inputNumber('4')">4</button>
+      <button class="number" (click)="inputNumber('5')">5</button>
+      <button class="number" (click)="inputNumber('6')">6</button>
+      <button>-</button>
+      <button class="number" (click)="inputNumber('1')">1</button>
+      <button class="number" (click)="inputNumber('2')">2</button>
+      <button class="number" (click)="inputNumber('3')">3</button>
+      <button>+</button>
+      <button class="number">0</button>
+      <button class="equal">+/-</button>
+      <button class="number">.</button>
+      <button class="equal">=</button>
+    </div>
   </div>
 </div>
