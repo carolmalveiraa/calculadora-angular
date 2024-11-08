@@ -1,5 +1,109 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://img.freepik.com/vetores-gratis/fundo-preto-com-foco-de-luz_1017-27230.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.calc {
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.title-calc h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.operations {
+  margin-bottom: 20px;
+}
+
+.prev-calc, .atual-calc {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.8);
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: rgba(85, 85, 85, 0.8);
+}
+
+button:active {
+  background-color: rgba(102, 102, 102, 0.8);
+}
+
+button.number {
+  background-color: rgba(68, 68, 68, 0.8);
+}
+
+button.number:hover {
+  background-color: rgba(85, 85, 85, 0.8);
+}
+
+button.operator {
+  background-color: rgba(147, 112, 219, 0.8);
+}
+
+button.operator:hover {
+  background-color: rgba(122, 87, 209, 0.8);
+}
+
+button.equal {
+  background-color: rgba(147, 112, 219, 0.8);
+}
+
+button.equal:hover {
+  background-color: rgba(122, 87, 209, 0.8);
+}
+
+button.clear-entry {
+  background-color: rgba(68, 68, 68, 0.8);
+  color: #9370DB;
+}
+
+button.clear-entry:hover {
+  background-color: rgba(85, 85, 85, 0.8);
+}
+
+button.percentage {
+  background-color: rgba(68, 68, 68, 0.8);
+  color: #fff;
 }
